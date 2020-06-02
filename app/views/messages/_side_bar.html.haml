@@ -1,0 +1,26 @@
+.SideBar
+  .SideHeader
+    .SideHeader__box
+      %p.SideHeader__box__name
+        aaa
+      %ul.SideHeader__box__menu
+        %li.SideHeader__box__editUser
+          = link_to "#" do
+            = icon('fas', 'edit')
+        %li.SideHeader__box__newGroup
+          = link_to "#" do
+            = icon('fas', 'cog')
+  .Groups
+    .Group__wrapper
+      = link_to "#", class:"Group" do
+        %p.Group__groupName
+          techcamp
+        %p.Group__listMessage
+          まだメッセージがありません。
+          
+    .Group__wrapper
+      = link_to "#", class:"Group" do
+        %p.Group__groupName
+          techcamp
+        %p.Group__listMessage
+          まだメッセージがありません。

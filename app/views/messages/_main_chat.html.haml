@@ -1,0 +1,39 @@
+.ChatMain
+  .MainHeader
+    .MainHeader__group
+      %p.MainHeader__group__name
+        test
+      %ul.MainHeader__group__members
+        Member：
+        %li.MainHeader__group__membersList
+          aaa
+
+    = link_to "#", class:"Edit" do
+      Edit
+  .MessageField
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__userName
+          aaa
+        .MessageInfo__date
+          2020年6月2日　16時36分
+      .Message
+        %p.Message__content
+          testtest
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__userName
+          aaa
+        .MessageInfo__date
+          2020年6月2日　16時36分
+      .Message
+        %p.Message__content
+          testtest
+  .Form
+    %form.NewMessage
+      .InputBox
+        %input{type:"text", class:"InputBox__text", placeholder:"type a message"}
+        %label{class:"InputBox__image"}
+          = icon('far','image')
+          %input{type: "file", class: "InputBox__image__file"}
+      %input{type: "submit", class: "SubmitBtn", value: "Send"}
