@@ -33,20 +33,27 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding:0 20px;
-    .Group__wrapper{
-      box-sizing: border-box;
-      padding: 20px 0 40px;
-      .Group{
-        font-size: 15px;
-        color: #fff;
-        text-decoration: none;
-        margin-bottom: 40px;
-        &__listMessage{
-          margin-top: 5px;
-          font-size: 11px;
+    
+      .Group__wrapper{
+        box-sizing: border-box;
+        padding: 20px 0 40px;
+        .Group{
+          font-size: 15px;
+          color: #fff;
+          text-decoration: none;
+          margin-bottom: 40px;
+          &__groupName{
+            color: #fff;
+            text-decoration: none;
+          }
+          &__listMessage{
+            margin-top: 5px;
+            font-size: 11px;
+            color: #fff;
+            text-decoration: none;
+          }
         }
       }
-    }
   }
 }
 
