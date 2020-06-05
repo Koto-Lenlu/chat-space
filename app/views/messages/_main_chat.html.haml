@@ -2,38 +2,22 @@
   .MainHeader
     .MainHeader__group
       %p.MainHeader__group__name
-        test
+        = @group.name
       %ul.MainHeader__group__members
         Member：
         %li.MainHeader__group__membersList
-          aaa
+          - @group.users.each do |user|
+            = user.name
 
-    = link_to "#", class:"Edit" do
+    = link_to edit_group_path(@group), class:"Edit" do
       Edit
   .MessageField
-    .MessageBox
-      .MessageInfo
-        .MessageInfo__userName
-          aaa
-        .MessageInfo__date
-          2020年6月2日　16時36分
-      .Message
-        %p.Message__content
-          testtest
-    .MessageBox
-      .MessageInfo
-        .MessageInfo__userName
-          aaa
-        .MessageInfo__date
-          2020年6月2日　16時36分
-      .Message
-        %p.Message__content
-          testtest
+    = render @messages
   .Form
-    %form.NewMessage
+    = form_with model: [@group, @message], html: {class: "NewMessage"}, local: true do |f|
       .InputBox
-        %input{type:"text", class:"InputBox__text", placeholder:"type a message"}
-        %label{class:"InputBox__image"}
-          = icon('far','image')
-          %input{type: "file", class: "InputBox__image__file"}
-      %input{type: "submit", class: "SubmitBtn", value: "Send"}
+        = f.text_field :content, class: 'InputBox__text', placeholder: 'type a message'
+        = f.label :image, class: 'InputBox__image' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'InputBox__image__file'
+      = f.submit 'Send', class: 'SubmitBtn'
