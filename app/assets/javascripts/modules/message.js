@@ -18,7 +18,8 @@ $(function(){
                     </div>
                   </div>`
       return html;
-    } else {
+    } 
+    else {
       let html = `<div class="MessageBox" data-message-id=${message.id}>
                     <div class="MessageInfo">
                       <div class="MessageInfo__userName">
