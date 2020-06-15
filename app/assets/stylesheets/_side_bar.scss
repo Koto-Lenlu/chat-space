@@ -37,10 +37,13 @@
       .Group__wrapper{
         box-sizing: border-box;
         padding: 20px 0 40px;
+        text-decoration: none;
+        a{
+          text-decoration: none;
+        }
         .Group{
           font-size: 15px;
           color: #fff;
-          text-decoration: none;
           margin-bottom: 40px;
           &__groupName{
             color: #fff;
@@ -50,7 +53,6 @@
             margin-top: 5px;
             font-size: 11px;
             color: #fff;
-            text-decoration: none;
           }
         }
       }
